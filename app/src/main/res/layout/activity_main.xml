@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Botón 'Elegir dispositivo' -->
+    <Button
+        android:id="@+id/bChooseDevice"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:text="Elegir dispositivo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Botón 'Conectar' -->
+    <Button
+        android:id="@+id/bConnect"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="Conectar"
+        app:layout_constraintTop_toBottomOf="@+id/bChooseDevice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <!-- Botón 'Elegir parámetros' -->
+    <Button
+        android:id="@+id/bChooseParams"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="Elegir parámetros"
+        app:layout_constraintTop_toBottomOf="@+id/bConnect"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <!-- Textview para mensajes -->
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="267dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:text="No se ha seleccionado ningún dispositivo Bluetooth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bChooseParams"
+        tools:ignore="MissingConstraints" />
+
+    <!-- Botón 'Iniciar lectura' -->
+    <Button
+        android:id="@+id/bStart"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:text="Iniciar lectura"
+        app:layout_constraintEnd_toStartOf="@+id/bStop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/info"
+        tools:layout_editor_absoluteY="315dp"
+        tools:ignore="MissingConstraints" />
+
+    <!-- Botón 'Detener lectura' -->
+    <Button
+        android:id="@+id/bStop"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:text="Detener lectura"
+        app:layout_constraintStart_toEndOf="@+id/bStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/info"
+        tools:ignore="MissingConstraints" />
+
+    <!-- Etiqueta 'Velocidad' -->
+    <TextView
+        android:id="@+id/command1Label"
+        android:layout_width="175dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="50dp"
+        android:text="Velocidad (km/h):"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bStart"
+        tools:ignore="MissingConstraints" />
+
+    <!-- Etiqueta 'RPM' -->
+    <TextView
+        android:id="@+id/command2Label"
+        android:layout_width="175dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:text="RPM:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/command1Label" />
+
+    <!-- Etiqueta 'Carga del Motor' -->
+    <TextView
+        android:id="@+id/command3Label"
+        android:layout_width="175dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:text="Carga del motor:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/command2Label" />
+
+    <!-- Resultado de 'Velocidad' -->
+    <TextView
+        android:id="@+id/command1Result"
+        android:layout_width="175dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="50dp"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/command1Label"
+        app:layout_constraintTop_toBottomOf="@+id/bStop"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <!-- Resultado de 'RPM' -->
+    <TextView
+        android:id="@+id/command2Result"
+        android:layout_width="175dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/command2Label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/command1Result" />
+
+    <!-- Resultado de 'Carga del Motor' -->
+    <TextView
+        android:id="@+id/command3Result"
+        android:layout_width="175dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/command3Label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/command2Result" />
+
+</android.support.constraint.ConstraintLayout>
